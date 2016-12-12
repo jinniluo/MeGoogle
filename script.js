@@ -10,8 +10,8 @@ var svg = d3.select('#plot')
 
 
 d3.queue()
-    .defer(d3.csv, "./data/siri.csv",parseData)
     .defer(d3.csv, "./data/allo.csv",parseData)
+    .defer(d3.csv, "./data/siri.csv",parseData)
     .await(function(error,siri, allo){
     
         if (error) throw error;
